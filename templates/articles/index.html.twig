@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title  %}Isset {% endblock %}
+{% block body %}
+    {% if articles %}
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>article title</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for article in articles %}
+                <tr>
+                    <td>{{ article }}</td>
+                    <td>
+                        <a href="/article/1" class="btn btn-primary">Show More</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}
